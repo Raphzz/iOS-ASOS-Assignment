@@ -3,7 +3,7 @@
 Assignment exercise for a role as Lead iOS Engineer at ASOS
 
 <p align="center">
-  <img width=35% src="https://github.com/Raphzz/iOS-ASOS-Assignment/example.png" />
+  <img width=35% src="https://github.com/Raphzz/iOS-ASOS-Assignment/blob/main/iOS-Dev-Assignment/example.png" />
 </p>
 
 ## Table of Contents

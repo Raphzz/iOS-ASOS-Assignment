@@ -53,6 +53,4 @@ I will now describe a brief tehnical solution to implement Offline mode on this 
 
 ## Frameworks
 
-[SnapKit](http://snapkit.io)
-
 [SDWebImage](https://github.com/SDWebImage/SDWebImage)

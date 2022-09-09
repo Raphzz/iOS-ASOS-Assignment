@@ -39,14 +39,8 @@ Below is the set of user stories that outline the intended functionality of this
 
 I will now describe a brief tehnical solution to implement Offline mode on this assignment.
 
-1. I would start by creating a CacheManager class, which will also have a Protocol for functions called "save" and "get".
-2. These two methods would access UserDefaults properties inside the device to fetch or save Model objects from the responses.
-3. I would achiev full support on Offline with just 2 methods by utilizing Generics (e.g. <T: Codable>).
-4. This CacheManager would be inject across all Service classes.
-5. During the fetch process of the API, if the User encounters an error or if the App is offline, I would point it to CacheManager "get" function.
-6. If API request is successful and user is fully online, save Codable class inside UserDefaults (e.g. cacheManager.save<T: Codable>(Codable.self, collectionOfModelItems))
-
 - Clean code, Architecture MVVM Pattern - Use of Delegates and reactive programming
+- Offline mode
 - UI with SwiftUI
 - Network Layer & Parsing
 - Unit Tests

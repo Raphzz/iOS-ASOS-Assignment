@@ -1,6 +1,6 @@
 # iOS Assignemnt - SpaceX API App
 
-Assignment exercise for a role as Lead iOS Engineer at ASOS
+Assignment exercise for a role as Lead iOS Engineer
 
 <p align="center">
   <img width=35% src="https://github.com/Raphzz/iOS-ASOS-Assignment/blob/main/iOS-Dev-Assignment/example.png" />

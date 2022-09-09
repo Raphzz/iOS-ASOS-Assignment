@@ -11,7 +11,7 @@ import SwiftUI
 struct iOS_Dev_AssignmentApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView(viewModel: HomeViewViewModal())
+            HomeView(viewModel: HomeViewViewModel())
         }
     }
 }

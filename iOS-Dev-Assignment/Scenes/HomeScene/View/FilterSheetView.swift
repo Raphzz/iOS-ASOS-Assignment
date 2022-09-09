@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FilterSheetView: View {
-    @StateObject var viewModel: HomeViewViewModal
+    @StateObject var viewModel: HomeViewViewModel
     
     @Environment(\.dismiss) var dismiss
     
@@ -61,6 +61,6 @@ struct FilterSheetView: View {
 
 struct FilterSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        FilterSheetView(viewModel: HomeViewViewModal())
+        FilterSheetView(viewModel: HomeViewViewModel())
     }
 }

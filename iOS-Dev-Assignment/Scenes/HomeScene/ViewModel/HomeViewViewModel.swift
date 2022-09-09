@@ -15,13 +15,13 @@ enum LaunchInterval: String {
     case since = "since"
 }
 
-final class HomeViewViewModal: ObservableObject {
+final class HomeViewViewModel: ObservableObject {
     
     private let service: HomeViewServiceProtocol
     
     private let companyTextBlock = "%@ was founded by %@ in %d. It has now %d employees, %d launch sites, and is valued at USD %d"
     
-    private var companyInfo: CompanyInfo?
+    private(set) var companyInfo: CompanyInfo?
     
     private var responseList: [LaunchMission] = []
     
@@ -63,7 +63,7 @@ final class HomeViewViewModal: ObservableObject {
         }
     }
     
-    private func prepareCompanyText() {
+    func prepareCompanyText() {
         if let companyName = companyInfo?.name,
             let founderName = companyInfo?.founder,
             let year = companyInfo?.founded,
@@ -77,8 +77,8 @@ final class HomeViewViewModal: ObservableObject {
         }
     }
     
-    private func numberOfDaysBetweenDate(date: Date) -> Int {
-        let fromDate = Calendar.current.startOfDay(for: Date())
+    private func numberOfDaysBetweenDate(today: Date = Date(), date: Date) -> Int {
+        let fromDate = Calendar.current.startOfDay(for: today)
         let toDate = Calendar.current.startOfDay(for: date)
         let numberOfDays = Calendar.current.dateComponents([.day], from: fromDate, to: toDate)
         
@@ -87,8 +87,8 @@ final class HomeViewViewModal: ObservableObject {
         return days
     }
     
-    func getDaysSinceOrFrom(date: Date) -> DaysSinceOrFrom {
-        let days = numberOfDaysBetweenDate(date: date)
+    func getDaysSinceOrFrom(today: Date = Date(), date: Date) -> DaysSinceOrFrom {
+        let days = numberOfDaysBetweenDate(today: today, date: date)
         let periodBetween = days < 0 ? LaunchInterval.since : LaunchInterval.from
         let positiveIfNeeded = days < 0 ? (days * -1) : days
         

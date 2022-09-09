@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel: HomeViewViewModal
+    @ObservedObject var viewModel: HomeViewViewModel
     
     @State private var showingSheet = false
     @State private var showingOptions = false
@@ -87,6 +87,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: HomeViewViewModal())
+        HomeView(viewModel: HomeViewViewModel())
     }
 }

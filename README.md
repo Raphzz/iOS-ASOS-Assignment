@@ -1,4 +1,4 @@
-# ASOS Assignemnt - SpaceX API App
+# iOS Assignemnt - SpaceX API App
 
 Assignment exercise for a role as Lead iOS Engineer at ASOS
 
